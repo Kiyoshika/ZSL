@@ -57,6 +57,18 @@ class DataSet
 
 
         /**
+         * @brief Return a reference to the value at index (row, column).
+         * 
+         * @tparam DataSetType Generic data set type (string, double, int)
+         * @param row Row index
+         * @param column Column index
+         * @return The value at cell index (row, column)
+         */
+        DataSetType &operator () (size_t row, size_t column);
+
+
+
+        /**
          * @brief Default constructor, does nothing.
          * 
          */
@@ -65,17 +77,18 @@ class DataSet
 
 
         /**
-         * @brief A constructor that accepts a file name and (optionally) an enum for the type of data to load. By default, it will load data as strings.
+         * @brief A constructor that reads a file and populates the data set.
          * 
          * @param file_name The name of the CSV file you want to load. Note that if the file is NOT in local path, you must specify a relative/full path.
          * @param delim The delimiter to separate columns. By default, it's a comma.
          */
-        DataSet(std::string file_name, std::string delim = ",");
+        DataSet(std::string file_name, char delim = ',');
 
 
 
         /**
          * @brief A constructor that sizes the data set according to given rows and columns. Equivalent to resize().
+         * For numerical types (e.g int, double) it will initialize all values to zero (0). For strings, it will initialize all values to blank strings ("").
          * @see resize()
          * 
          * @param rows The number of rows desired in the data set
@@ -152,6 +165,15 @@ class DataSet
 
 
         /**
+         * @brief Add a column name.
+         * 
+         * @param column_name The column name to add
+         */
+        void add_column_name(std::string column_name);
+
+
+
+        /**
          * @brief Set column names for data set.
          * 
          * @param column_names A vector of strings with the column names.
@@ -192,11 +214,28 @@ class DataSet
 
 
         /**
+         * @brief Set the row count
+         * 
+         */
+        void set_row_count(size_t rows);
+
+
+
+        /**
          * @brief Count columns present in data set.
          * 
          * @return Count of columns 
          */
         size_t count_columns();
+
+
+
+        /**
+         * @brief Set the column count
+         * 
+         * @param columns 
+         */
+        void set_column_count(size_t columns);
 
 
 
