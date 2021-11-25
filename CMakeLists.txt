@@ -1,5 +1,5 @@
 project(zslib)
-cmake_minimum_required(3.1.0)
+cmake_minimum_required(VERSION 3.1.0)
 
 include(CTest)
 

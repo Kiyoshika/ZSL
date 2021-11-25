@@ -3,27 +3,17 @@
 #include <iostream>
 #include <vector>
 #include <functional>
+#include <unordered_map>
 
 /**
  * @brief A data structure that holds matrix-style data (rows, columns) with some utility methods to select columns, filter, etc.
+ * @tparam DataSetType Generic data set type (string, double, int)
  * 
  */
+template <typename DataSetType>
 class DataSet
 {
     public:
-        /**
-         * @brief An enum to store the different possible data types. A data set can hold strings, doubles and signed integers.
-         * 
-         */
-        enum Type
-        {
-            String,
-            Double,
-            Int
-        };
-
-
-
         /**
          * @brief Assign a data set equal to another.
          * 
@@ -62,7 +52,6 @@ class DataSet
          * @param column Column index
          * @return The value at cell index (row, column)
          */
-        template <typename DataSetType>
         DataSetType operator () (size_t row, size_t column) const;
 
 
@@ -80,9 +69,8 @@ class DataSet
          * 
          * @param file_name The name of the CSV file you want to load. Note that if the file is NOT in local path, you must specify a relative/full path.
          * @param delim The delimiter to separate columns. By default, it's a comma.
-         * @param Type An enum identifying the type of data to load as. By default it loads data as strings.
          */
-        DataSet(std::string file_name, std::string delim = ",", enum Type = Type::String);
+        DataSet(std::string file_name, std::string delim = ",");
 
 
 
@@ -115,7 +103,6 @@ class DataSet
          * @param column Column index
          * @param value Value to set
          */
-        template <typename DataSetType>
         void set_cell(size_t row, size_t column, DataSetType value);
 
 
@@ -129,7 +116,6 @@ class DataSet
          * @param column Column index
          * @return The value at cell index (row, column)
          */
-        template <typename DataSetType>
         DataSetType get_cell(size_t row, size_t column);
 
 
@@ -141,7 +127,6 @@ class DataSet
          * @param column Column index
          * @param values A vector of values to set as the column.
          */
-        template <typename DataSetType>
         void set_column(size_t column, std::vector<DataSetType> const& values);
 
 
@@ -153,8 +138,25 @@ class DataSet
          * @param column Column index
          * @return A vector of values extracted from the given column index. 
          */
-        template <typename DataSetType>
         std::vector<DataSetType> get_column(size_t column);
+
+
+
+        /**
+         * @brief Get column names for data set.
+         * 
+         * @return A vector of strings with the column names.
+         */
+        std::vector<std::string> get_column_names();
+
+
+
+        /**
+         * @brief Set column names for data set.
+         * 
+         * @param column_names A vector of strings with the column names.
+         */
+        void set_column_names(std::vector<std::string> const& column_names);
 
 
 
@@ -165,7 +167,6 @@ class DataSet
          * @param row Row index
          * @param values A vector of values to set as the row.
          */
-        template <typename DataSetType>
         void set_row(size_t row, std::vector<DataSetType> const& values);
 
 
@@ -177,8 +178,25 @@ class DataSet
          * @param row Row index
          * @return A vector of values extracted from the given row index. 
          */
-        template <typename DataSetType>
         std::vector<DataSetType> get_row(size_t row);
+
+
+
+        /**
+         * @brief Count rows present in data set (excluding column names).
+         * 
+         * @return Count of rows
+         */
+        size_t count_rows();
+
+
+
+        /**
+         * @brief Count columns present in data set.
+         * 
+         * @return Count of columns 
+         */
+        size_t count_columns();
 
 
 
@@ -190,7 +208,6 @@ class DataSet
          * @param data The 1D vector containing the data you want to add to the data set.
          * @param column_names A vector of strings containing the column names you want to set.
          */
-        template <typename DataSetType>
         void load(std::vector<DataSetType> const& data, std::vector<std::string> const& column_names);
 
 
@@ -203,7 +220,6 @@ class DataSet
          * @param data The 1D vector containing the data you want to add to the data set.
          * @param column_name The name of the column you want to set.
          */
-        template <typename DataSetType>
         void load(std::vector<DataSetType> const& data, std::string column_name);
 
 
@@ -220,12 +236,11 @@ class DataSet
 
         /**
          * @brief Cast your dataset into a different data type.
+         * @note Due to C++ template limitations, you cannot overwrite the current data set's type. You will have to assign this cast to a new DataSet object.
          * 
-         * @param Type An enum representing the type to cast to (Type::String, Type::Double, Type::Int).
-         * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
-         * @return A copy of the data set converted to the desired data type. If modify_inplace = true, the original data set will be overwritten.
+         * @return A copy of the data set converted to the desired data type.
          */
-        DataSet cast(enum Type, bool modify_inplace = false);
+        DataSet cast();
 
 
 
@@ -321,7 +336,6 @@ class DataSet
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set will the cell values replaced according to the specified find_value and replace_value. If modify_inplace = true, the original data set will be overwritten. 
          */
-        template <typename DataSetType>
         DataSet replace(DataSetType find_value, DataSetType replace_value, size_t occurences = 0, bool modify_inplace = true);
 
         
@@ -397,14 +411,14 @@ class DataSet
 
 
     private:
-        // current data type of data set (default Type::String)
-        int current_type = Type::String;
+        // vector of column names (i.e headers)
+        std::vector<std::string> column_names;
 
-        // to avoid dealing with templates, I'll have three separate vectors to store data
-        // as different types. Ideally, only one of these will have data and the other two
-        // will remain empty.
-        std::vector<std::string> data_as_string;
-        std::vector<double> data_as_double;
-        std::vector<int> data_as_int;
+        // vector to store the data set
+        // I'm using the 1D vector trick to mimic a 2D matrix
+        std::vector<DataSetType> data;
+
+        // total rows/columns in the data set
+        size_t row_count, column_count;
 };
 #endif
