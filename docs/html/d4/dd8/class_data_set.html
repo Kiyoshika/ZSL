@@ -181,9 +181,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_row_count</b> (si
 <tr class="memitem:a07881c30dca19630c95efb8bac53a244"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a07881c30dca19630c95efb8bac53a244">to_csv</a> (std::string const &amp;file_name, char const delim=',')</td></tr>
 <tr class="memdesc:a07881c30dca19630c95efb8bac53a244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write contents of a data set to a CSV file.  <a href="../../d4/dd8/class_data_set.html#a07881c30dca19630c95efb8bac53a244">More...</a><br /></td></tr>
 <tr class="separator:a07881c30dca19630c95efb8bac53a244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c342882e2b95afae05660993014890"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a10c342882e2b95afae05660993014890">cast</a> ()</td></tr>
-<tr class="memdesc:a10c342882e2b95afae05660993014890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast your dataset into a different data type.  <a href="../../d4/dd8/class_data_set.html#a10c342882e2b95afae05660993014890">More...</a><br /></td></tr>
-<tr class="separator:a10c342882e2b95afae05660993014890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9462e0ae619f4e132403bb228dbc54"><td class="memTemplParams" colspan="2">template&lt;typename CastType &gt; </td></tr>
+<tr class="memitem:afe9462e0ae619f4e132403bb228dbc54"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; CastType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#afe9462e0ae619f4e132403bb228dbc54">cast</a> ()</td></tr>
+<tr class="memdesc:afe9462e0ae619f4e132403bb228dbc54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cast your data set into a different type.  <a href="../../d4/dd8/class_data_set.html#afe9462e0ae619f4e132403bb228dbc54">More...</a><br /></td></tr>
+<tr class="separator:afe9462e0ae619f4e132403bb228dbc54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca14d048991703174d09ed551b2d543"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a2ca14d048991703174d09ed551b2d543">get_column_indices</a> (std::vector&lt; std::string &gt; const &amp;column_names)</td></tr>
+<tr class="memdesc:a2ca14d048991703174d09ed551b2d543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the column indices from a vector of column names.  <a href="../../d4/dd8/class_data_set.html#a2ca14d048991703174d09ed551b2d543">More...</a><br /></td></tr>
+<tr class="separator:a2ca14d048991703174d09ed551b2d543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe96b7389409a59143a4e2fc138c5305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#abe96b7389409a59143a4e2fc138c5305">select</a> (std::vector&lt; size_t &gt; const &amp;column_indices, bool modify_inplace=false)</td></tr>
 <tr class="memdesc:abe96b7389409a59143a4e2fc138c5305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a subset of your original data set by passing the desired column indices.  <a href="../../d4/dd8/class_data_set.html#abe96b7389409a59143a4e2fc138c5305">More...</a><br /></td></tr>
 <tr class="separator:abe96b7389409a59143a4e2fc138c5305"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,7 +353,7 @@ template&lt;typename DataSetType &gt; </div>
 </div><div class="memdoc">
 
 <p>A constructor to load a 1D vector row-wise. </p>
-<p >Equivalent to load(std::vector&lt;DataSetType&gt;, std::vector&lt;std::string&gt;) </p><dl class="section see"><dt>See also</dt><dd>load(std::vector&lt;DataSetType&gt;, std::vector&lt;std::string&gt;)</dd></dl>
+<p >Equivalent to <a class="el" href="../../d4/dd8/class_data_set.html#af48e60d85909bb8c802f4d5fe7ac4f33" title="Load a data set with a 1D vector.">load(std::vector&lt;DataSetType&gt; const&amp;, std::vector&lt;std::string&gt; const&amp;)</a> </p><dl class="section see"><dt>See also</dt><dd>load(std::vector&lt;DataSetType&gt;, std::vector&lt;std::string&gt;)</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">DataSetType</td><td>Generic data set type (string, double, int) </td></tr>
@@ -489,16 +493,18 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="a10c342882e2b95afae05660993014890" name="a10c342882e2b95afae05660993014890"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10c342882e2b95afae05660993014890">&#9670;&nbsp;</a></span>cast()</h2>
+<a id="afe9462e0ae619f4e132403bb228dbc54" name="afe9462e0ae619f4e132403bb228dbc54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9462e0ae619f4e132403bb228dbc54">&#9670;&nbsp;</a></span>cast()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename DataSetType &gt; </div>
+<div class="memtemplate">
+template&lt;typename CastType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::cast </td>
+          <td class="memname"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; CastType &gt; <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::cast </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -506,9 +512,11 @@ template&lt;typename DataSetType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Cast your dataset into a different data type. </p>
-<dl class="section note"><dt>Note</dt><dd>Due to C++ template limitations, you cannot overwrite the current data set's type. You will have to assign this cast to a new <a class="el" href="../../d4/dd8/class_data_set.html" title="A data structure that holds matrix-style data (rows, columns) with some utility methods to select col...">DataSet</a> object.</dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>A copy of the data set converted to the desired data type. </dd></dl>
+<p>Cast your data set into a different type. </p>
+<dl class="section note"><dt>Note</dt><dd>Due to C++ template limitations, you cannot overwrite the current data set's type. You will have to assign this cast to a new <a class="el" href="../../d4/dd8/class_data_set.html" title="A data structure that holds matrix-style data (rows, columns) with some utility methods to select col...">DataSet</a> object. </dd>
+<dd>
+The only supported types currently are: string, double and int. Trying to cast to any other type will result in the linker complaining that the method is undefined.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A copy of the data set converted to the desired type (string, double, int). </dd></dl>
 
 </div>
 </div>
@@ -832,6 +840,29 @@ template&lt;typename DataSetType &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector of values extracted from the given column index. </dd></dl>
+
+</div>
+</div>
+<a id="a2ca14d048991703174d09ed551b2d543" name="a2ca14d048991703174d09ed551b2d543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca14d048991703174d09ed551b2d543">&#9670;&nbsp;</a></span>get_column_indices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataSetType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; size_t &gt; <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::get_column_indices </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>column_names</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the column indices from a vector of column names. </p>
+<dl class="section return"><dt>Returns</dt><dd>A vector of (size_t) indices from the passed column names </dd></dl>
 
 </div>
 </div>
@@ -1752,7 +1783,7 @@ template&lt;typename DataSetType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>dataset/<a class="el" href="../../de/dee/_data_set_8hpp_source.html">DataSet.hpp</a></li>
+<li>src/include/dataset/<a class="el" href="../../de/dee/_data_set_8hpp_source.html">DataSet.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1760,7 +1791,7 @@ template&lt;typename DataSetType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a></li>
-    <li class="footer">Generated on Fri Nov 26 2021 23:16:22 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sat Nov 27 2021 12:27:48 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

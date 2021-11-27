@@ -252,7 +252,7 @@ class DataSet
 
 
         /**
-         * @brief A constructor to load a 1D vector row-wise. Equivalent to load(std::vector<DataSetType>, std::vector<std::string>)
+         * @brief A constructor to load a 1D vector row-wise. Equivalent to load(std::vector<DataSetType> const&, std::vector<std::string> const&)
          * @see load(std::vector<DataSetType>, std::vector<std::string>)
          * 
          * @tparam DataSetType Generic data set type (string, double, int)
@@ -302,7 +302,7 @@ class DataSet
          * @note Due to C++ template limitations, you cannot overwrite the current data set's type. You will have to assign this cast to a new DataSet object.
          * @note The only supported types currently are: string, double and int. Trying to cast to any other type will result in the linker complaining that the method is undefined.
          * 
-         * @return A copy of the data set converted to doubles.
+         * @return A copy of the data set converted to the desired type (string, double, int).
          */
         template <typename CastType>
         DataSet<CastType> cast();

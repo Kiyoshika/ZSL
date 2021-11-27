@@ -7,19 +7,19 @@
 int main()
 {
     DataSet<double> data("../datasets/example_csv_2.csv");
+    std::vector<size_t> drop_idx = {1};
 
-    data.filter([](std::vector<double> cols){
-        return cols[0] > 5 || cols[2] <= 3.3;
-    }, true);
+    DataSet<double> data_drop = data.drop(drop_idx);
 
-    for (size_t row = 0; row < data.count_rows(); ++row)
+    for (size_t row = 0; row < data_drop.count_rows(); ++row)
     {
-        for (size_t col = 0; col < data.count_columns(); ++col)
+        for (size_t col = 0; col < data_drop.count_columns(); ++col)
         {
-            std::cout << data(row, col) << " ";
+            std::cout << data_drop(row, col) << " ";
         }
         std::cout << "\n";
     }
+    
     
 
     return 0;
