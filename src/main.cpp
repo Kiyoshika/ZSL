@@ -8,13 +8,19 @@ int main()
 {
     DataSet<double> data("../datasets/example_csv_2.csv");
 
-    std::vector<std::string> col_names = {"col1", "col3"};
-    DataSet<double> select_data = data.select(col_names);
+    data.filter([](std::vector<double> cols){
+        return cols[0] > 5 || cols[2] <= 3.3;
+    }, true);
 
-    for (auto const& col : select_data.get_column_names())
+    for (size_t row = 0; row < data.count_rows(); ++row)
     {
-        std::cout << col << " ";
+        for (size_t col = 0; col < data.count_columns(); ++col)
+        {
+            std::cout << data(row, col) << " ";
+        }
+        std::cout << "\n";
     }
+    
 
     return 0;
 }

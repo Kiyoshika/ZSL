@@ -6,6 +6,7 @@ add_library(zsl
     dataset/io/DataIO.cpp
     dataset/casting/Casting.cpp
     dataset/select/Select.cpp
+    dataset/filter/Filter.cpp
 )
 target_include_directories(zsl PRIVATE include)
 

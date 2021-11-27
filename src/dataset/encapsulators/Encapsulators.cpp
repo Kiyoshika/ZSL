@@ -36,10 +36,10 @@ std::vector<DataSetType> DataSet<DataSetType>::get_row(size_t row) const
 }
 
 template <typename DataSetType>
-size_t DataSet<DataSetType>::count_rows() const { return this->column_count; }
+size_t DataSet<DataSetType>::count_rows() const { return this->row_count; }
 
 template <typename DataSetType>
-size_t DataSet<DataSetType>::count_columns() const { return this->row_count; }
+size_t DataSet<DataSetType>::count_columns() const { return this->column_count; }
 
 template <typename DataSetType>
 std::vector<size_t> DataSet<DataSetType>::get_column_indices(std::vector<std::string> const& column_names)
