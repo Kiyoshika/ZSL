@@ -6,21 +6,16 @@
 
 int main()
 {
-    DataSet<int> mydata("../datasets/example_csv_2.csv");
+    DataSet<std::string> data1("../datasets/example_csv.csv");
+    DataSet<std::string> data2 = data1;
+    DataSet<std::string> data3("../datasets/example_csv_2.csv");
 
-    for (size_t row = 0; row < 3; ++row)
-    {
-        for (size_t col = 0; col < 3; ++col)
-        {
-            std::cout << mydata(row, col) << " ";
-        }
-        std::cout << "\n";
-    }
-
-    for (auto const& cols : mydata.get_column_names())
-    {
-        std::cout << cols << " ";
-    }
+    bool is_equal = data2 == data1;
+    bool is_equal2 = data3 == data1;
+    bool is_notequal = data3 != data1;
+    std::cout << is_equal << "\n"; // 1
+    std::cout << is_equal2 << "\n"; // 0
+    std::cout << is_notequal << "\n"; // 1
 
     return 0;
 }

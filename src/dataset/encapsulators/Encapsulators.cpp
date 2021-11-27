@@ -6,13 +6,13 @@ template class DataSet<std::string>;
 
 // getters
 template<typename DataSetType>
-std::vector<std::string> DataSet<DataSetType>::get_column_names() { return this->column_names; }
+std::vector<std::string> DataSet<DataSetType>::get_column_names() const { return this->column_names; }
 
 template<typename DataSetType>
 DataSetType DataSet<DataSetType>::get_cell(size_t row, size_t column) { return (*this)(row, column); }
 
 template<typename DataSetType>
-std::vector<DataSetType> DataSet<DataSetType>::get_column(size_t column)
+std::vector<DataSetType> DataSet<DataSetType>::get_column(size_t column) const
 {
     std::vector<DataSetType> column_data(this->row_count);
     for (size_t row = 0; row < this->row_count; ++row)
@@ -24,7 +24,7 @@ std::vector<DataSetType> DataSet<DataSetType>::get_column(size_t column)
 }
 
 template<typename DataSetType>
-std::vector<DataSetType> DataSet<DataSetType>::get_row(size_t row)
+std::vector<DataSetType> DataSet<DataSetType>::get_row(size_t row) const
 {
     std::vector<DataSetType> row_data(this->column_count);
     for (size_t column = 0; column < this->column_count; ++column)
@@ -36,16 +36,16 @@ std::vector<DataSetType> DataSet<DataSetType>::get_row(size_t row)
 }
 
 template<typename DataSetType>
-size_t DataSet<DataSetType>::count_rows() { return this->column_count; }
+size_t DataSet<DataSetType>::count_rows() const { return this->column_count; }
 
 template<typename DataSetType>
-size_t DataSet<DataSetType>::count_columns() { return this->row_count; }
+size_t DataSet<DataSetType>::count_columns() const { return this->row_count; }
 
 
 
 // setters
 template <typename DataSetType>
-void DataSet<DataSetType>::add_column_name(std::string column_name) { this->column_names.push_back(column_name); }
+void DataSet<DataSetType>::add_column_name(std::string const& column_name) { this->column_names.push_back(column_name); }
 
 template <typename DataSetType>
 void DataSet<DataSetType>::set_cell(size_t row, size_t column, DataSetType value) { (*this)(row, column) = value; }

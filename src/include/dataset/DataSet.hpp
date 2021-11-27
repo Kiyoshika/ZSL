@@ -19,7 +19,7 @@ class DataSet
          * 
          * @param other_data The right-hand-side data set which will overwrite the current data set. 
          */
-        void operator = (DataSet const& other_data) const;
+        void operator = (DataSet const& other_data);
 
 
 
@@ -82,7 +82,7 @@ class DataSet
          * @param file_name The name of the CSV file you want to load. Note that if the file is NOT in local path, you must specify a relative/full path.
          * @param delim The delimiter to separate columns. By default, it's a comma.
          */
-        DataSet(std::string file_name, char delim = ',');
+        DataSet(std::string const& file_name, char delim = ',');
 
 
 
@@ -151,7 +151,7 @@ class DataSet
          * @param column Column index
          * @return A vector of values extracted from the given column index. 
          */
-        std::vector<DataSetType> get_column(size_t column);
+        std::vector<DataSetType> get_column(size_t column) const;
 
 
 
@@ -160,7 +160,7 @@ class DataSet
          * 
          * @return A vector of strings with the column names.
          */
-        std::vector<std::string> get_column_names();
+        std::vector<std::string> get_column_names() const;
 
 
 
@@ -169,7 +169,7 @@ class DataSet
          * 
          * @param column_name The column name to add
          */
-        void add_column_name(std::string column_name);
+        void add_column_name(std::string const& column_name);
 
 
 
@@ -200,7 +200,7 @@ class DataSet
          * @param row Row index
          * @return A vector of values extracted from the given row index. 
          */
-        std::vector<DataSetType> get_row(size_t row);
+        std::vector<DataSetType> get_row(size_t row) const;
 
 
 
@@ -209,7 +209,7 @@ class DataSet
          * 
          * @return Count of rows
          */
-        size_t count_rows();
+        size_t count_rows() const;
 
 
 
@@ -226,7 +226,7 @@ class DataSet
          * 
          * @return Count of columns 
          */
-        size_t count_columns();
+        size_t count_columns() const;
 
 
 
@@ -252,6 +252,18 @@ class DataSet
 
 
         /**
+         * @brief A constructor to load a 1D vector row-wise. Equivalent to load(std::vector<DataSetType>, std::vector<std::string>)
+         * @see load(std::vector<DataSetType>, std::vector<std::string>)
+         * 
+         * @tparam DataSetType Generic data set type (string, double, int)
+         * @param data The 1D vector containing the data you want to add to the data set.
+         * @param column_names A vector of strings containing the column names you want to set.
+         */
+        DataSet(std::vector<DataSetType> const& data, std::vector<std::string> const& column_names);
+
+
+
+        /**
          * @brief Load a data set with a 1D vector.
          * This accepts a single string for the column name, implying that this data will be loaded as one COLUMN.
          * 
@@ -259,7 +271,18 @@ class DataSet
          * @param data The 1D vector containing the data you want to add to the data set.
          * @param column_name The name of the column you want to set.
          */
-        void load(std::vector<DataSetType> const& data, std::string column_name);
+        void load(std::vector<DataSetType> const& data, std::string const& column_name);
+
+
+
+        /**
+         * @brief A constructor to load a 1D vector column-wise. Equivalent to load(std::vector<DataSetType>, std::string)
+         * 
+         * @tparam DataSetType Generic data set type (string, double, int)
+         * @param data The 1D vector containing the data you want to add to the data set.
+         * @param column_name The name of the column you want to set.
+         */
+        DataSet(std::vector<DataSetType> const& data, std::string const& column_name);
 
 
 
@@ -269,7 +292,7 @@ class DataSet
          * @param file_name The desired file name (you must include your own extension, e.g .csv, .txt, etc)
          * @param delim The delimiter to separate columns. By default, it's a comma.
          */
-        void to_csv(std::string file_name, std::string delim = ",");
+        void to_csv(std::string const& file_name, char const delim = ',');
 
 
 
@@ -361,7 +384,7 @@ class DataSet
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set with rows removed that contained null values (in specified columns). If modify_inplace = true, the original data set will be overwritten. 
          */
-        DataSet dropna(std::string null_value = "", bool modify_inplace = true);
+        DataSet dropna(std::string const& null_value = "", bool modify_inplace = true);
 
 
 
@@ -408,7 +431,7 @@ class DataSet
          * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
          * @return The count of null values present in the data set according to the specified null_value. 
          */
-        size_t count_na(std::string null_value = "");
+        size_t count_na(std::string const& null_value = "");
 
 
 
@@ -445,7 +468,7 @@ class DataSet
          * @note If the any of the old column names passed are not found in the original data set, an exception will be thrown.
          * @param old_new_column_names An unordered_map<string, string> where the key is the old column name and value is the new column name.
          */
-        void rename(std::unordered_map<std::string, std::string> old_new_column_names);
+        void rename(std::unordered_map<std::string, std::string> const& old_new_column_names);
 
 
 

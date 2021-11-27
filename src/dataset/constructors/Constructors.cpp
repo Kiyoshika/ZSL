@@ -137,8 +137,8 @@ void parse_file(std::string file_name, char delim, size_t row_count, size_t colu
     file.close();
 }
 
-template <>
-DataSet<std::string>::DataSet(std::string file_name, char delim)
+template <typename DataSetType>
+void set_dims(DataSet<DataSetType> &data_set, std::string const& file_name, char const& delim)
 {
     size_t row_count = 0, column_count = 0;
 
@@ -146,42 +146,43 @@ DataSet<std::string>::DataSet(std::string file_name, char delim)
     get_dims_from_file(file_name, delim, row_count, column_count);
     
     // size data set based on the dimensions we've gathered from the file
-    this->set_row_count(row_count);
-    this->set_column_count(column_count);
-    this->resize(row_count, column_count);
+    data_set.set_row_count(row_count);
+    data_set.set_column_count(column_count);
+    data_set.resize(row_count, column_count);
+}
 
+template <>
+DataSet<std::string>::DataSet(std::string const& file_name, char const delim)
+{
+    set_dims(*this, file_name, delim);
     parse_file<std::string>(file_name, delim, row_count, column_count, this->data, this->column_names, get_string_cell_value);
 }
 
 template <>
-DataSet<double>::DataSet(std::string file_name, char delim)
+DataSet<double>::DataSet(std::string const& file_name, char const delim)
 {
-    size_t row_count = 0, column_count = 0;
-
-    // pass through file initially to size up data set
-    get_dims_from_file(file_name, delim, row_count, column_count);
-    
-    // size data set based on the dimensions we've gathered from the file
-    this->set_row_count(row_count);
-    this->set_column_count(column_count);
-    this->resize(row_count, column_count);
-
+    set_dims(*this, file_name, delim);
     parse_file<double>(file_name, delim, row_count, column_count, this->data, this->column_names, get_double_cell_value);
 }
 
 template <>
-DataSet<int>::DataSet(std::string file_name, char delim)
+DataSet<int>::DataSet(std::string const& file_name, char const delim)
 {
-    size_t row_count = 0, column_count = 0;
-
-    // pass through file initially to size up data set
-    get_dims_from_file(file_name, delim, row_count, column_count);
-    
-    // size data set based on the dimensions we've gathered from the file
-    this->set_row_count(row_count);
-    this->set_column_count(column_count);
-    this->resize(row_count, column_count);
-
+    set_dims(*this, file_name, delim);
     parse_file<int>(file_name, delim, row_count, column_count, this->data, this->column_names, get_int_cell_value);
 
+}
+
+template <typename DataSetType>
+DataSet<DataSetType>::DataSet(std::vector<DataSetType> const& data, std::vector<std::string> const& column_names)
+{
+    // equivalent to load()
+    this->load(data, column_names);
+}
+
+template <typename DataSetType>
+DataSet<DataSetType>::DataSet(std::vector<DataSetType> const& data, std::string const& column_name)
+{
+    // equivalent to load()
+    this->load(data, column_name);
 }
