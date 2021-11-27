@@ -233,7 +233,7 @@ class DataSet
         /**
          * @brief Set the column count
          * 
-         * @param columns 
+         * @param columns The number of desired columns
          */
         void set_column_count(size_t columns);
 
@@ -384,7 +384,7 @@ class DataSet
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set with rows removed that contained null values (in specified columns). If modify_inplace = true, the original data set will be overwritten. 
          */
-        DataSet dropna(std::string const& null_value = "", bool modify_inplace = true);
+        DataSet dropna(std::string const& null_value = "", bool modify_inplace = false);
 
 
 
@@ -398,7 +398,7 @@ class DataSet
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set will the cell values replaced according to the specified find_value and replace_value. If modify_inplace = true, the original data set will be overwritten. 
          */
-        DataSet replace(DataSetType find_value, DataSetType replace_value, size_t occurences = 0, bool modify_inplace = true);
+        DataSet replace(DataSetType find_value, DataSetType replace_value, size_t occurences = 0, bool modify_inplace = false);
 
         
 
