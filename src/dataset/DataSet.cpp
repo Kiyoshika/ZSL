@@ -9,5 +9,7 @@ template class DataSet<std::string>;
 template<typename DataSetType>
 void DataSet<DataSetType>::resize(size_t rows, size_t columns)
 {
+    this->row_count = rows;
+    this->column_count = columns;
     this->data.resize(rows * columns);
 }

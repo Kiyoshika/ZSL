@@ -296,13 +296,15 @@ class DataSet
 
 
 
+
         /**
-         * @brief Cast your dataset into a different data type.
+         * @brief Cast your data set into doubles.
          * @note Due to C++ template limitations, you cannot overwrite the current data set's type. You will have to assign this cast to a new DataSet object.
          * 
-         * @return A copy of the data set converted to the desired data type.
+         * @return A copy of the data set converted to doubles.
          */
-        DataSet cast();
+        template <typename CastType>
+        DataSet<CastType> cast();
 
 
 

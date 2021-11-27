@@ -4,6 +4,7 @@ add_library(zsl
     dataset/encapsulators/Encapsulators.cpp
     dataset/DataSet.cpp
     dataset/io/DataIO.cpp
+    dataset/casting/Casting.cpp
 )
 target_include_directories(zsl PRIVATE include)
 
