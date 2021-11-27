@@ -298,8 +298,9 @@ class DataSet
 
 
         /**
-         * @brief Cast your data set into doubles.
+         * @brief Cast your data set into a different type.
          * @note Due to C++ template limitations, you cannot overwrite the current data set's type. You will have to assign this cast to a new DataSet object.
+         * @note The only supported types currently are: string, double and int. Trying to cast to any other type will result in the linker complaining that the method is undefined.
          * 
          * @return A copy of the data set converted to doubles.
          */
@@ -307,6 +308,13 @@ class DataSet
         DataSet<CastType> cast();
 
 
+
+        /**
+         * @brief Get the column indices from a vector of column names.
+         * 
+         * @return A vector of (size_t) indices from the passed column names
+         */
+        std::vector<size_t> get_column_indices(std::vector<std::string> const& column_names);
 
         /**
          * @brief Select a subset of your original data set by passing the desired column indices.

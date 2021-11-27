@@ -5,13 +5,13 @@ template class DataSet<int>;
 template class DataSet<std::string>;
 
 // getters
-template<typename DataSetType>
+template <typename DataSetType>
 std::vector<std::string> DataSet<DataSetType>::get_column_names() const { return this->column_names; }
 
-template<typename DataSetType>
+template <typename DataSetType>
 DataSetType DataSet<DataSetType>::get_cell(size_t row, size_t column) { return (*this)(row, column); }
 
-template<typename DataSetType>
+template <typename DataSetType>
 std::vector<DataSetType> DataSet<DataSetType>::get_column(size_t column) const
 {
     std::vector<DataSetType> column_data(this->row_count);
@@ -23,7 +23,7 @@ std::vector<DataSetType> DataSet<DataSetType>::get_column(size_t column) const
     return column_data;
 }
 
-template<typename DataSetType>
+template <typename DataSetType>
 std::vector<DataSetType> DataSet<DataSetType>::get_row(size_t row) const
 {
     std::vector<DataSetType> row_data(this->column_count);
@@ -35,11 +35,33 @@ std::vector<DataSetType> DataSet<DataSetType>::get_row(size_t row) const
     return row_data;
 }
 
-template<typename DataSetType>
+template <typename DataSetType>
 size_t DataSet<DataSetType>::count_rows() const { return this->column_count; }
 
-template<typename DataSetType>
+template <typename DataSetType>
 size_t DataSet<DataSetType>::count_columns() const { return this->row_count; }
+
+template <typename DataSetType>
+std::vector<size_t> DataSet<DataSetType>::get_column_indices(std::vector<std::string> const& column_names)
+{
+    std::vector<size_t> column_indices(column_names.size());
+
+    size_t iter = 0;
+    for (auto const& col : column_names)
+    {
+        auto find_index = std::lower_bound(this->column_names.begin(), this->column_names.end(), col);
+        if (find_index == this->column_names.end())
+        {
+            throw std::invalid_argument("get_column_indices() - Could not find all passed column values when trying to get their indices.");
+        }
+        column_indices[iter] = std::distance(this->column_names.begin(), find_index);
+        iter++;
+    }
+
+    return column_indices;
+}
+
+
 
 
 
