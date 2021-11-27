@@ -333,13 +333,12 @@ class DataSet
          * The vector in the lambda argument represents a vector of the current row (when iterating through the data set).
          * Thus, the indices of the vector represent the volumn indices. vec[0] represents the zeroth column for example.
          * 
-         * @tparam VectorType Generic type for the data set (string, double, int)
+         * @tparam DataSetType Generic type for the data set (string, double, int)
          * @param filter_conditions A boolean user-defined lambda that defines the filter conditions using the VectorType vector.
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set with the filter conditions applied. If modify_inplace = true, the original data set will be overwritten.
          */
-        template <typename VectorType>
-        DataSet filter(std::function<bool(std::vector<VectorType>)> filter_conditions, bool modify_inplace = false);
+        DataSet filter(std::function<bool(std::vector<DataSetType>)> filter_conditions, bool modify_inplace = false);
 
 
 

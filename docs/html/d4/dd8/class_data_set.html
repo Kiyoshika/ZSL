@@ -190,10 +190,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_row_count</b> (si
 <tr class="memitem:adb1d379883f767ec64860b5b99b2a390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#adb1d379883f767ec64860b5b99b2a390">select</a> (std::vector&lt; std::string &gt; const &amp;column_names, bool modify_inplace=false)</td></tr>
 <tr class="memdesc:adb1d379883f767ec64860b5b99b2a390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a subset of your original data set by passing the desired column names.  <a href="../../d4/dd8/class_data_set.html#adb1d379883f767ec64860b5b99b2a390">More...</a><br /></td></tr>
 <tr class="separator:adb1d379883f767ec64860b5b99b2a390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa2334f0cf170048a8e9468a7c555094"><td class="memTemplParams" colspan="2">template&lt;typename VectorType &gt; </td></tr>
-<tr class="memitem:afa2334f0cf170048a8e9468a7c555094"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#afa2334f0cf170048a8e9468a7c555094">filter</a> (std::function&lt; bool(std::vector&lt; VectorType &gt;)&gt; filter_conditions, bool modify_inplace=false)</td></tr>
-<tr class="memdesc:afa2334f0cf170048a8e9468a7c555094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass a lambda to this method to filter a data set's rows based on user-defined conditions.  <a href="../../d4/dd8/class_data_set.html#afa2334f0cf170048a8e9468a7c555094">More...</a><br /></td></tr>
-<tr class="separator:afa2334f0cf170048a8e9468a7c555094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ef69c6417e2236040a6c4b1fd527a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a87ef69c6417e2236040a6c4b1fd527a4">filter</a> (std::function&lt; bool(std::vector&lt; DataSetType &gt;)&gt; filter_conditions, bool modify_inplace=false)</td></tr>
+<tr class="memdesc:a87ef69c6417e2236040a6c4b1fd527a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass a lambda to this method to filter a data set's rows based on user-defined conditions.  <a href="../../d4/dd8/class_data_set.html#a87ef69c6417e2236040a6c4b1fd527a4">More...</a><br /></td></tr>
+<tr class="separator:a87ef69c6417e2236040a6c4b1fd527a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1d1ace4bef85d9970c29f87b9b3dc28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#af1d1ace4bef85d9970c29f87b9b3dc28">drop</a> (std::vector&lt; size_t &gt; const &amp;column_indices, bool modify_inplace=false)</td></tr>
 <tr class="memdesc:af1d1ace4bef85d9970c29f87b9b3dc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop a set of columns from your original data set by passing the desired column indices.  <a href="../../d4/dd8/class_data_set.html#af1d1ace4bef85d9970c29f87b9b3dc28">More...</a><br /></td></tr>
 <tr class="separator:af1d1ace4bef85d9970c29f87b9b3dc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,12 +202,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_row_count</b> (si
 <tr class="memitem:ab77fd035abcc3952a080c50a00f30a77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ab77fd035abcc3952a080c50a00f30a77">transpose</a> (bool modify_inplace=false)</td></tr>
 <tr class="memdesc:ab77fd035abcc3952a080c50a00f30a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose the data set (i.e, switch the row/column indices to "rotate" the data).  <a href="../../d4/dd8/class_data_set.html#ab77fd035abcc3952a080c50a00f30a77">More...</a><br /></td></tr>
 <tr class="separator:ab77fd035abcc3952a080c50a00f30a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1717eef1643ae1c9e6601561a2c71e9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a1717eef1643ae1c9e6601561a2c71e9c">dropna</a> (std::string const &amp;null_value=&quot;&quot;, bool modify_inplace=true)</td></tr>
-<tr class="memdesc:a1717eef1643ae1c9e6601561a2c71e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop rows that contain null values.  <a href="../../d4/dd8/class_data_set.html#a1717eef1643ae1c9e6601561a2c71e9c">More...</a><br /></td></tr>
-<tr class="separator:a1717eef1643ae1c9e6601561a2c71e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a298f33a34ad74e8eed7c5e1e2b5902a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a298f33a34ad74e8eed7c5e1e2b5902a9">replace</a> (DataSetType find_value, DataSetType replace_value, size_t occurences=0, bool modify_inplace=true)</td></tr>
-<tr class="memdesc:a298f33a34ad74e8eed7c5e1e2b5902a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace cell values in a data set.  <a href="../../d4/dd8/class_data_set.html#a298f33a34ad74e8eed7c5e1e2b5902a9">More...</a><br /></td></tr>
-<tr class="separator:a298f33a34ad74e8eed7c5e1e2b5902a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e27dd41386f3d6e9a37362a072107cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a2e27dd41386f3d6e9a37362a072107cf">dropna</a> (std::string const &amp;null_value=&quot;&quot;, bool modify_inplace=false)</td></tr>
+<tr class="memdesc:a2e27dd41386f3d6e9a37362a072107cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop rows that contain null values.  <a href="../../d4/dd8/class_data_set.html#a2e27dd41386f3d6e9a37362a072107cf">More...</a><br /></td></tr>
+<tr class="separator:a2e27dd41386f3d6e9a37362a072107cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9aef4f1bfc5f5aecb7cbdf109e607b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ab9aef4f1bfc5f5aecb7cbdf109e607b1">replace</a> (DataSetType find_value, DataSetType replace_value, size_t occurences=0, bool modify_inplace=false)</td></tr>
+<tr class="memdesc:ab9aef4f1bfc5f5aecb7cbdf109e607b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace cell values in a data set.  <a href="../../d4/dd8/class_data_set.html#ab9aef4f1bfc5f5aecb7cbdf109e607b1">More...</a><br /></td></tr>
+<tr class="separator:ab9aef4f1bfc5f5aecb7cbdf109e607b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac407f7b24edb5a3d82594621f2f5af53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ac407f7b24edb5a3d82594621f2f5af53">sample</a> (size_t n, bool sample_with_replacement=false)</td></tr>
 <tr class="memdesc:ac407f7b24edb5a3d82594621f2f5af53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample a data set with or without replacement.  <a href="../../d4/dd8/class_data_set.html#ac407f7b24edb5a3d82594621f2f5af53">More...</a><br /></td></tr>
 <tr class="separator:ac407f7b24edb5a3d82594621f2f5af53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -666,8 +665,8 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="a1717eef1643ae1c9e6601561a2c71e9c" name="a1717eef1643ae1c9e6601561a2c71e9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1717eef1643ae1c9e6601561a2c71e9c">&#9670;&nbsp;</a></span>dropna()</h2>
+<a id="a2e27dd41386f3d6e9a37362a072107cf" name="a2e27dd41386f3d6e9a37362a072107cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e27dd41386f3d6e9a37362a072107cf">&#9670;&nbsp;</a></span>dropna()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -684,7 +683,7 @@ template&lt;typename DataSetType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>modify_inplace</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>modify_inplace</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -707,20 +706,18 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="afa2334f0cf170048a8e9468a7c555094" name="afa2334f0cf170048a8e9468a7c555094"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa2334f0cf170048a8e9468a7c555094">&#9670;&nbsp;</a></span>filter()</h2>
+<a id="a87ef69c6417e2236040a6c4b1fd527a4" name="a87ef69c6417e2236040a6c4b1fd527a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ef69c6417e2236040a6c4b1fd527a4">&#9670;&nbsp;</a></span>filter()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename DataSetType &gt; </div>
-<div class="memtemplate">
-template&lt;typename VectorType &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::filter </td>
           <td>(</td>
-          <td class="paramtype">std::function&lt; bool(std::vector&lt; VectorType &gt;)&gt;&#160;</td>
+          <td class="paramtype">std::function&lt; bool(std::vector&lt; DataSetType &gt;)&gt;&#160;</td>
           <td class="paramname"><em>filter_conditions</em>, </td>
         </tr>
         <tr>
@@ -741,7 +738,7 @@ template&lt;typename VectorType &gt; </div>
 <p >The vector in the lambda argument represents a vector of the current row (when iterating through the data set). Thus, the indices of the vector represent the volumn indices. vec[0] represents the zeroth column for example.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">VectorType</td><td>Generic type for the data set (string, double, int) </td></tr>
+    <tr><td class="paramname">DataSetType</td><td>Generic type for the data set (string, double, int) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1223,8 +1220,8 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="a298f33a34ad74e8eed7c5e1e2b5902a9" name="a298f33a34ad74e8eed7c5e1e2b5902a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a298f33a34ad74e8eed7c5e1e2b5902a9">&#9670;&nbsp;</a></span>replace()</h2>
+<a id="ab9aef4f1bfc5f5aecb7cbdf109e607b1" name="ab9aef4f1bfc5f5aecb7cbdf109e607b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9aef4f1bfc5f5aecb7cbdf109e607b1">&#9670;&nbsp;</a></span>replace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1253,7 +1250,7 @@ template&lt;typename DataSetType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>modify_inplace</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>modify_inplace</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1763,7 +1760,7 @@ template&lt;typename DataSetType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a></li>
-    <li class="footer">Generated on Fri Nov 26 2021 23:08:35 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Fri Nov 26 2021 23:16:22 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
