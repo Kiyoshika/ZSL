@@ -393,7 +393,7 @@ class DataSet
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set with rows removed that contained null values (in specified columns). If modify_inplace = true, the original data set will be overwritten. 
          */
-        DataSet dropna(std::string const& null_value = "", bool modify_inplace = false);
+        DataSet<std::string> dropna(std::string const& null_value = "", bool modify_inplace = false);
 
 
 
