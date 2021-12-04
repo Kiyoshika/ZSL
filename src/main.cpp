@@ -6,8 +6,8 @@
 
 int main()
 {
-    DataSet<std::string> data("../datasets/rows_with_nulls.csv");
-    data.dropna("", true);
+    DataSet<std::string> data("../datasets/repeated_value_cells.csv");
+    data.replace("a", "f", 0, true);
 
     for (size_t row = 0; row < data.count_rows(); ++row)
     {

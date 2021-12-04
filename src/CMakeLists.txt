@@ -8,6 +8,7 @@ add_library(zsl
     dataset/select/Select.cpp
     dataset/filter/Filter.cpp
     dataset/drop/Drop.cpp
+    dataset/replace/Replace.cpp
 )
 target_include_directories(zsl PRIVATE include)
 
