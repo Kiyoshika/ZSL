@@ -435,13 +435,22 @@ class DataSet
 
 
         /**
-         * @brief Count the number of null values present in the data set.
+         * @brief Count the total number of null values present in the data set.
          * 
          * @note This method ONLY works for std::string value
          * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
          * @return The count of null values present in the data set according to the specified null_value. 
          */
         size_t count_na(std::string const& null_value = "");
+
+
+
+        /**
+         * @brief Count the total number of null values by column and print a summary to the console (column name: null count) 
+         * 
+         * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
+         */
+        void count_na_by_column(std::string const& null_value = "");
 
 
 

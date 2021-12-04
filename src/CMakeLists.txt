@@ -12,6 +12,7 @@ add_library(zsl
     dataset/sample/Sample.cpp
     dataset/append/Append.cpp
     dataset/transpose/Transpose.cpp
+    dataset/aggregates/CountNA.cpp
 )
 target_include_directories(zsl PRIVATE include)
 
