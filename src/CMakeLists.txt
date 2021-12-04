@@ -14,6 +14,7 @@ add_library(zsl
     dataset/transpose/Transpose.cpp
     dataset/aggregates/CountNA.cpp
     dataset/split/SplitData.cpp
+    dataset/rename/Rename.cpp
 )
 target_compile_options(zsl PRIVATE -O2)
 target_include_directories(zsl PRIVATE include)
