@@ -206,9 +206,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_row_count</b> (si
 <tr class="memitem:ab77fd035abcc3952a080c50a00f30a77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ab77fd035abcc3952a080c50a00f30a77">transpose</a> (bool modify_inplace=false)</td></tr>
 <tr class="memdesc:ab77fd035abcc3952a080c50a00f30a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transpose the data set (i.e, switch the row/column indices to "rotate" the data).  <a href="../../d4/dd8/class_data_set.html#ab77fd035abcc3952a080c50a00f30a77">More...</a><br /></td></tr>
 <tr class="separator:ab77fd035abcc3952a080c50a00f30a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e27dd41386f3d6e9a37362a072107cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a2e27dd41386f3d6e9a37362a072107cf">dropna</a> (std::string const &amp;null_value=&quot;&quot;, bool modify_inplace=false)</td></tr>
-<tr class="memdesc:a2e27dd41386f3d6e9a37362a072107cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop rows that contain null values.  <a href="../../d4/dd8/class_data_set.html#a2e27dd41386f3d6e9a37362a072107cf">More...</a><br /></td></tr>
-<tr class="separator:a2e27dd41386f3d6e9a37362a072107cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a8a4373ed4b395982bbfe32713f95e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a57a8a4373ed4b395982bbfe32713f95e">dropna</a> (std::string const &amp;null_value=&quot;&quot;, bool modify_inplace=false)</td></tr>
+<tr class="memdesc:a57a8a4373ed4b395982bbfe32713f95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drop rows that contain null values.  <a href="../../d4/dd8/class_data_set.html#a57a8a4373ed4b395982bbfe32713f95e">More...</a><br /></td></tr>
+<tr class="separator:a57a8a4373ed4b395982bbfe32713f95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9aef4f1bfc5f5aecb7cbdf109e607b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ab9aef4f1bfc5f5aecb7cbdf109e607b1">replace</a> (DataSetType find_value, DataSetType replace_value, size_t occurences=0, bool modify_inplace=false)</td></tr>
 <tr class="memdesc:ab9aef4f1bfc5f5aecb7cbdf109e607b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace cell values in a data set.  <a href="../../d4/dd8/class_data_set.html#ab9aef4f1bfc5f5aecb7cbdf109e607b1">More...</a><br /></td></tr>
 <tr class="separator:ab9aef4f1bfc5f5aecb7cbdf109e607b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,17 +219,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_row_count</b> (si
 <tr class="memdesc:a9a7107729a461b11437191e03145c6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append ("glue") two data sets together.  <a href="../../d4/dd8/class_data_set.html#a9a7107729a461b11437191e03145c6f2">More...</a><br /></td></tr>
 <tr class="separator:a9a7107729a461b11437191e03145c6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f4817f60d1ab8c90ba30348964f0852"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a8f4817f60d1ab8c90ba30348964f0852">count_na</a> (std::string const &amp;null_value=&quot;&quot;)</td></tr>
-<tr class="memdesc:a8f4817f60d1ab8c90ba30348964f0852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of null values present in the data set.  <a href="../../d4/dd8/class_data_set.html#a8f4817f60d1ab8c90ba30348964f0852">More...</a><br /></td></tr>
+<tr class="memdesc:a8f4817f60d1ab8c90ba30348964f0852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the total number of null values present in the data set.  <a href="../../d4/dd8/class_data_set.html#a8f4817f60d1ab8c90ba30348964f0852">More...</a><br /></td></tr>
 <tr class="separator:a8f4817f60d1ab8c90ba30348964f0852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb8abdcfd81cef2cc89266f286fc30b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#addb8abdcfd81cef2cc89266f286fc30b">count_na_by_column</a> (std::string const &amp;null_value=&quot;&quot;)</td></tr>
+<tr class="memdesc:addb8abdcfd81cef2cc89266f286fc30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the total number of null values by column and print a summary to the console (column name: null count)  <a href="../../d4/dd8/class_data_set.html#addb8abdcfd81cef2cc89266f286fc30b">More...</a><br /></td></tr>
+<tr class="separator:addb8abdcfd81cef2cc89266f286fc30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac49f098023238c2e55a37654f4b09ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ac49f098023238c2e55a37654f4b09ea8">head</a> (size_t rows=10)</td></tr>
 <tr class="memdesc:ac49f098023238c2e55a37654f4b09ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the head of the data set to the console.  <a href="../../d4/dd8/class_data_set.html#ac49f098023238c2e55a37654f4b09ea8">More...</a><br /></td></tr>
 <tr class="separator:ac49f098023238c2e55a37654f4b09ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94c5a45284524110009790293593c724"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a94c5a45284524110009790293593c724">split_data</a> (double test_ratio, <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> &amp;train_data, <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> &amp;test_data)</td></tr>
 <tr class="memdesc:a94c5a45284524110009790293593c724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split data set into two subsets, training and testing, according to a test_ratio.  <a href="../../d4/dd8/class_data_set.html#a94c5a45284524110009790293593c724">More...</a><br /></td></tr>
 <tr class="separator:a94c5a45284524110009790293593c724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7367e2ca0638f1997647a7a73bb2090b"><td class="memItemLeft" align="right" valign="top"><a id="a7367e2ca0638f1997647a7a73bb2090b" name="a7367e2ca0638f1997647a7a73bb2090b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>describe</b> ()</td></tr>
-<tr class="memdesc:a7367e2ca0638f1997647a7a73bb2090b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print common descriptive statistics about the data set to the console. <br /></td></tr>
+<tr class="memitem:a7367e2ca0638f1997647a7a73bb2090b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a7367e2ca0638f1997647a7a73bb2090b">describe</a> ()</td></tr>
+<tr class="memdesc:a7367e2ca0638f1997647a7a73bb2090b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print common descriptive statistics about the data set to the console.  <a href="../../d4/dd8/class_data_set.html#a7367e2ca0638f1997647a7a73bb2090b">More...</a><br /></td></tr>
 <tr class="separator:a7367e2ca0638f1997647a7a73bb2090b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60af2c6be6560386cea5e26eb6ab6444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a60af2c6be6560386cea5e26eb6ab6444">rename</a> (std::unordered_map&lt; std::string, std::string &gt; const &amp;old_new_column_names)</td></tr>
 <tr class="memdesc:a60af2c6be6560386cea5e26eb6ab6444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rename a set of columns.  <a href="../../d4/dd8/class_data_set.html#a60af2c6be6560386cea5e26eb6ab6444">More...</a><br /></td></tr>
@@ -480,7 +482,9 @@ template&lt;typename DataSetType &gt; </div>
 </div><div class="memdoc">
 
 <p>Append ("glue") two data sets together. </p>
-<dl class="section note"><dt>Note</dt><dd>This is NOT the same thing as a join. We are simply taking two data sets and "gluing" them together as long as the row or column sizes match.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is NOT the same thing as a join. We are simply taking two data sets and "gluing" them together as long as the row or column sizes match. </dd>
+<dd>
+When appending along rows ('r') the original column names will be used. If appending on columns ('c') then the new columns will be appended as well. However, an exception will be thrown if duplicate column names are found. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other_data</td><td>The other data set to append with. </td></tr>
@@ -560,7 +564,8 @@ template&lt;typename DataSetType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Count the number of null values present in the data set. </p>
+<p>Count the total number of null values present in the data set. </p>
+<dl class="section note"><dt>Note</dt><dd>This method ONLY works for std::string values </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">null_value</td><td>Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "". </td></tr>
@@ -568,6 +573,35 @@ template&lt;typename DataSetType &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The count of null values present in the data set according to the specified null_value. </dd></dl>
+
+</div>
+</div>
+<a id="addb8abdcfd81cef2cc89266f286fc30b" name="addb8abdcfd81cef2cc89266f286fc30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb8abdcfd81cef2cc89266f286fc30b">&#9670;&nbsp;</a></span>count_na_by_column()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataSetType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::count_na_by_column </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>null_value</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Count the total number of null values by column and print a summary to the console (column name: null count) </p>
+<dl class="section note"><dt>Note</dt><dd>This method ONLY works for std::string values </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">null_value</td><td>Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "". </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -590,6 +624,28 @@ template&lt;typename DataSetType &gt; </div>
 
 <p>Count rows present in data set (excluding column names). </p>
 <dl class="section return"><dt>Returns</dt><dd>Count of rows </dd></dl>
+
+</div>
+</div>
+<a id="a7367e2ca0638f1997647a7a73bb2090b" name="a7367e2ca0638f1997647a7a73bb2090b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7367e2ca0638f1997647a7a73bb2090b">&#9670;&nbsp;</a></span>describe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataSetType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::describe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print common descriptive statistics about the data set to the console. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This method won't be implemented until statistics portion is developed so currently this method will do nothing. </dd></dl>
 
 </div>
 </div>
@@ -673,8 +729,8 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="a2e27dd41386f3d6e9a37362a072107cf" name="a2e27dd41386f3d6e9a37362a072107cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e27dd41386f3d6e9a37362a072107cf">&#9670;&nbsp;</a></span>dropna()</h2>
+<a id="a57a8a4373ed4b395982bbfe32713f95e" name="a57a8a4373ed4b395982bbfe32713f95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a8a4373ed4b395982bbfe32713f95e">&#9670;&nbsp;</a></span>dropna()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,7 +738,7 @@ template&lt;typename DataSetType &gt; </div>
 template&lt;typename DataSetType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::dropna </td>
+          <td class="memname"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; std::string &gt; <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::dropna </td>
           <td>(</td>
           <td class="paramtype">std::string const &amp;&#160;</td>
           <td class="paramname"><em>null_value</em> = <code>&quot;&quot;</code>, </td>
@@ -702,7 +758,7 @@ template&lt;typename DataSetType &gt; </div>
 </div><div class="memdoc">
 
 <p>Drop rows that contain null values. </p>
-<dl class="section note"><dt>Note</dt><dd>This method ONLY works for string data types.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method ONLY works for std::string values. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">null_value</td><td>Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "". </td></tr>
@@ -1771,7 +1827,7 @@ template&lt;typename DataSetType &gt; </div>
 </div><div class="memdoc">
 
 <p>Transpose the data set (i.e, switch the row/column indices to "rotate" the data). </p>
-<dl class="section note"><dt>Note</dt><dd>When transposing data, the column names will be reverted to generic column names (col1, col2, ...) as the sizes can vary.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>When transposing data, the column names will be reverted to generic column names (col1, col2, ...) as the sizes can vary.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">modify_inplace</td><td>A boolean indicating if you want to overwrite the original data set. By default it's false. </td></tr>
@@ -1791,7 +1847,7 @@ template&lt;typename DataSetType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a></li>
-    <li class="footer">Generated on Sat Nov 27 2021 12:27:48 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sat Dec 4 2021 00:33:21 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>

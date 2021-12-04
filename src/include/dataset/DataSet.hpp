@@ -387,8 +387,7 @@ class DataSet
 
         /**
          * @brief Drop rows that contain null values.
-         * @note This method ONLY works for string data types.
-         * 
+         * @note This method ONLY works for std::string values. 
          * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the data set with rows removed that contained null values (in specified columns). If modify_inplace = true, the original data set will be overwritten. 
@@ -437,7 +436,7 @@ class DataSet
         /**
          * @brief Count the total number of null values present in the data set.
          * 
-         * @note This method ONLY works for std::string value
+         * @note This method ONLY works for std::string values
          * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
          * @return The count of null values present in the data set according to the specified null_value. 
          */
@@ -447,7 +446,7 @@ class DataSet
 
         /**
          * @brief Count the total number of null values by column and print a summary to the console (column name: null count) 
-         * 
+         * @note This method ONLY works for std::string values
          * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
          */
         void count_na_by_column(std::string const& null_value = "");
