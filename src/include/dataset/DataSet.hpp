@@ -424,7 +424,7 @@ class DataSet
         /**
          * @brief Append ("glue") two data sets together.
          * @note This is NOT the same thing as a join. We are simply taking two data sets and "gluing" them together as long as the row or column sizes match.
-         * 
+         * @note When appending along rows ('r') the original column names will be used. If appending on columns ('c') then the new columns will be appended as well. However, an exception will be thrown if duplicate column names are found.
          * @param other_data The other data set to append with.
          * @param type Append data along rows ('r', default) or columns ('c'). If appending along rows, the data set will grow vertically. If appending on columns, it will grow horizontally.
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
@@ -437,6 +437,7 @@ class DataSet
         /**
          * @brief Count the number of null values present in the data set.
          * 
+         * @note This method ONLY works for std::string value
          * @param null_value Specify a specific null value such as "NA", "NaN", etc. By default it searches for blank strings "".
          * @return The count of null values present in the data set according to the specified null_value. 
          */

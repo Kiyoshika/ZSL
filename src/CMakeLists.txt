@@ -2,7 +2,7 @@ add_library(zsl
     dataset/constructors/Constructors.cpp
     dataset/operators/Operators.cpp
     dataset/encapsulators/Encapsulators.cpp
-    dataset/DataSet.cpp
+    dataset/resize/Resize.cpp
     dataset/io/DataIO.cpp
     dataset/casting/Casting.cpp
     dataset/select/Select.cpp
@@ -10,6 +10,8 @@ add_library(zsl
     dataset/drop/Drop.cpp
     dataset/replace/Replace.cpp
     dataset/sample/Sample.cpp
+    dataset/append/Append.cpp
+    dataset/transpose/Transpose.cpp
 )
 target_include_directories(zsl PRIVATE include)
 

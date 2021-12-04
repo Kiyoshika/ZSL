@@ -6,8 +6,12 @@
 
 int main()
 {
-    DataSet<double> full_data("../datasets/doubles.csv");
-    DataSet<double> data = full_data.sample(3);
+    DataSet<double> data("../datasets/doubles.csv");
+    DataSet<double> data2("../datasets/doubles2.csv");
+
+    //data.append(data2, 'r', true);
+
+    data.transpose(true);
 
     for (size_t row = 0; row < data.count_rows(); ++row)
     {
@@ -16,6 +20,13 @@ int main()
             std::cout << data(row, col) << " ";
         }
         std::cout << "\n";
+    }
+
+    std::cout << "\n";
+
+    for (auto col : data.get_column_names())
+    {
+        std::cout << col << " ";
     }
     
     return 0;
