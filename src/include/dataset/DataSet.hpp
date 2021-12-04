@@ -466,7 +466,7 @@ class DataSet
 
         /**
          * @brief Print common descriptive statistics about the data set to the console.
-         * 
+         * @warning This method won't be implemented until statistics portion is developed so currently this method will do nothing.
          */
         void describe();
 

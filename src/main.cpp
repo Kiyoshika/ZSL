@@ -6,8 +6,8 @@
 
 int main()
 {
-    DataSet<std::string> data("../datasets/repeated_value_cells.csv");
-    data.replace("a", "f", 0, true);
+    DataSet<double> full_data("../datasets/doubles.csv");
+    DataSet<double> data = full_data.sample(3);
 
     for (size_t row = 0; row < data.count_rows(); ++row)
     {
