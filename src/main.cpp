@@ -7,24 +7,22 @@
 int main()
 {
     DataSet<double> data("../datasets/doubles.csv");
-    DataSet<double> data2("../datasets/doubles2.csv");
-
     //data.append(data2, 'r', true);
 
-    data.transpose(true);
+    DataSet<double> data2 = data.transpose().transpose();
 
-    for (size_t row = 0; row < data.count_rows(); ++row)
+    for (size_t row = 0; row < data2.count_rows(); ++row)
     {
-        for (size_t col = 0; col < data.count_columns(); ++col)
+        for (size_t col = 0; col < data2.count_columns(); ++col)
         {
-            std::cout << data(row, col) << " ";
+            std::cout << data2(row, col) << " ";
         }
         std::cout << "\n";
     }
 
     std::cout << "\n";
 
-    for (auto col : data.get_column_names())
+    for (auto col : data2.get_column_names())
     {
         std::cout << col << " ";
     }

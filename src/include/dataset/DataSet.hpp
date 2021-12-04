@@ -376,7 +376,7 @@ class DataSet
 
         /**
          * @brief Transpose the data set (i.e, switch the row/column indices to "rotate" the data).
-         * @note When transposing data, the column names will be reverted to generic column names (col1, col2, ...) as the sizes can vary.
+         * @warning When transposing data, the column names will be reverted to generic column names (col1, col2, ...) as the sizes can vary.
          * 
          * @param modify_inplace A boolean indicating if you want to overwrite the original data set. By default it's false.
          * @return A copy of the transposed data set. If modify_inplace = true, the original data set will be overwritten.
