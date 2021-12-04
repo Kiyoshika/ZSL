@@ -469,7 +469,7 @@ class DataSet
          * @param train_data The train data set passed by reference. This can be an empty DataSet object, e.g `DataSet train_data;`
          * @param test_data The test data set passed by reference. This can be an empty DataSet object, e.g `DataSet test_data;`
          */
-        void split_data(double test_ratio, DataSet &train_data, DataSet &test_data);
+        void split_data(DataSet &train_data, DataSet &test_data, double test_ratio = 0.3);
 
 
 
