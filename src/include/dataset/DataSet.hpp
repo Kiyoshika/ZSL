@@ -457,8 +457,9 @@ class DataSet
          * @brief Print the head of the data set to the console.
          * 
          * @param rows How many rows you would like to display. Set to 10 by default.
+         * @param column_width Specifies the max character length per column. Characters greater than this length will be truncated with "..." as the last three characters.
          */
-        void head(size_t rows = 10);
+        void head(size_t rows = 10, size_t column_width = 15);
 
 
 

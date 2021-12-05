@@ -6,8 +6,8 @@
 
 int main()
 {
-    DataSet<double> data("../datasets/doubles3.csv");
-    data.head();
+    DataSet<std::string> data("../datasets/doubles.csv");
+    data.head(10);
 
     return 0;
 }
