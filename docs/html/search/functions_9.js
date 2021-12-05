@@ -8,5 +8,5 @@ var searchData=
   ['set_5fcolumn_5fnames_5',['set_column_names',['../d4/dd8/class_data_set.html#aa9e521ef28708c0cea59f92c75af1006',1,'DataSet']]],
   ['set_5frow_6',['set_row',['../d4/dd8/class_data_set.html#a1c612f1c197d17a52ad215fc827344c2',1,'DataSet']]],
   ['set_5frow_5fcount_7',['set_row_count',['../d4/dd8/class_data_set.html#a08b2ba66e3e5f402fee040132e091e09',1,'DataSet']]],
-  ['split_5fdata_8',['split_data',['../d4/dd8/class_data_set.html#a94c5a45284524110009790293593c724',1,'DataSet']]]
+  ['split_5fdata_8',['split_data',['../d4/dd8/class_data_set.html#ac5957e3f38836020cf2f526f23298e77',1,'DataSet']]]
 ];

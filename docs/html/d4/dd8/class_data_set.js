@@ -22,7 +22,7 @@ var class_data_set =
     [ "get_column_indices", "d4/dd8/class_data_set.html#a2ca14d048991703174d09ed551b2d543", null ],
     [ "get_column_names", "d4/dd8/class_data_set.html#a771b6318e7eb76739a3a1e05fd7ff197", null ],
     [ "get_row", "d4/dd8/class_data_set.html#a905fbacd1dda1aaa534348fcf7e23694", null ],
-    [ "head", "d4/dd8/class_data_set.html#ac49f098023238c2e55a37654f4b09ea8", null ],
+    [ "head", "d4/dd8/class_data_set.html#a285c0699ae1631018b457b5556698392", null ],
     [ "load", "d4/dd8/class_data_set.html#a9bce62ecd205b32ee9c133853ba4a419", null ],
     [ "load", "d4/dd8/class_data_set.html#af48e60d85909bb8c802f4d5fe7ac4f33", null ],
     [ "operator!=", "d4/dd8/class_data_set.html#abece9567b8ebb2322f05661e228c3751", null ],
@@ -42,7 +42,7 @@ var class_data_set =
     [ "set_column_names", "d4/dd8/class_data_set.html#aa9e521ef28708c0cea59f92c75af1006", null ],
     [ "set_row", "d4/dd8/class_data_set.html#a1c612f1c197d17a52ad215fc827344c2", null ],
     [ "set_row_count", "d4/dd8/class_data_set.html#a08b2ba66e3e5f402fee040132e091e09", null ],
-    [ "split_data", "d4/dd8/class_data_set.html#a94c5a45284524110009790293593c724", null ],
+    [ "split_data", "d4/dd8/class_data_set.html#ac5957e3f38836020cf2f526f23298e77", null ],
     [ "to_csv", "d4/dd8/class_data_set.html#a07881c30dca19630c95efb8bac53a244", null ],
     [ "transpose", "d4/dd8/class_data_set.html#ab77fd035abcc3952a080c50a00f30a77", null ]
 ];

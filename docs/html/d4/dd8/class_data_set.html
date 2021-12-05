@@ -224,12 +224,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_row_count</b> (si
 <tr class="memitem:addb8abdcfd81cef2cc89266f286fc30b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#addb8abdcfd81cef2cc89266f286fc30b">count_na_by_column</a> (std::string const &amp;null_value=&quot;&quot;)</td></tr>
 <tr class="memdesc:addb8abdcfd81cef2cc89266f286fc30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the total number of null values by column and print a summary to the console (column name: null count)  <a href="../../d4/dd8/class_data_set.html#addb8abdcfd81cef2cc89266f286fc30b">More...</a><br /></td></tr>
 <tr class="separator:addb8abdcfd81cef2cc89266f286fc30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac49f098023238c2e55a37654f4b09ea8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ac49f098023238c2e55a37654f4b09ea8">head</a> (size_t rows=10)</td></tr>
-<tr class="memdesc:ac49f098023238c2e55a37654f4b09ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the head of the data set to the console.  <a href="../../d4/dd8/class_data_set.html#ac49f098023238c2e55a37654f4b09ea8">More...</a><br /></td></tr>
-<tr class="separator:ac49f098023238c2e55a37654f4b09ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c5a45284524110009790293593c724"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a94c5a45284524110009790293593c724">split_data</a> (double test_ratio, <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> &amp;train_data, <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> &amp;test_data)</td></tr>
-<tr class="memdesc:a94c5a45284524110009790293593c724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split data set into two subsets, training and testing, according to a test_ratio.  <a href="../../d4/dd8/class_data_set.html#a94c5a45284524110009790293593c724">More...</a><br /></td></tr>
-<tr class="separator:a94c5a45284524110009790293593c724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a285c0699ae1631018b457b5556698392"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a285c0699ae1631018b457b5556698392">head</a> (size_t rows=10, size_t column_width=15)</td></tr>
+<tr class="memdesc:a285c0699ae1631018b457b5556698392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the head of the data set to the console.  <a href="../../d4/dd8/class_data_set.html#a285c0699ae1631018b457b5556698392">More...</a><br /></td></tr>
+<tr class="separator:a285c0699ae1631018b457b5556698392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5957e3f38836020cf2f526f23298e77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#ac5957e3f38836020cf2f526f23298e77">split_data</a> (<a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> &amp;train_data, <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a> &amp;test_data, double test_ratio=0.3)</td></tr>
+<tr class="memdesc:ac5957e3f38836020cf2f526f23298e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split data set into two subsets, training and testing, according to a test_ratio.  <a href="../../d4/dd8/class_data_set.html#ac5957e3f38836020cf2f526f23298e77">More...</a><br /></td></tr>
+<tr class="separator:ac5957e3f38836020cf2f526f23298e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7367e2ca0638f1997647a7a73bb2090b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dd8/class_data_set.html#a7367e2ca0638f1997647a7a73bb2090b">describe</a> ()</td></tr>
 <tr class="memdesc:a7367e2ca0638f1997647a7a73bb2090b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print common descriptive statistics about the data set to the console.  <a href="../../d4/dd8/class_data_set.html#a7367e2ca0638f1997647a7a73bb2090b">More...</a><br /></td></tr>
 <tr class="separator:a7367e2ca0638f1997647a7a73bb2090b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -979,8 +979,8 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="ac49f098023238c2e55a37654f4b09ea8" name="ac49f098023238c2e55a37654f4b09ea8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac49f098023238c2e55a37654f4b09ea8">&#9670;&nbsp;</a></span>head()</h2>
+<a id="a285c0699ae1631018b457b5556698392" name="a285c0699ae1631018b457b5556698392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a285c0699ae1631018b457b5556698392">&#9670;&nbsp;</a></span>head()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -991,8 +991,18 @@ template&lt;typename DataSetType &gt; </div>
           <td class="memname">void <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::head </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>rows</em> = <code>10</code></td><td>)</td>
+          <td class="paramname"><em>rows</em> = <code>10</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>column_width</em> = <code>15</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1001,6 +1011,7 @@ template&lt;typename DataSetType &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rows</td><td>How many rows you would like to display. Set to 10 by default. </td></tr>
+    <tr><td class="paramname">column_width</td><td>Specifies the max character length per column. Characters greater than this length will be truncated with "..." as the last three characters. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1723,8 +1734,8 @@ template&lt;typename DataSetType &gt; </div>
 
 </div>
 </div>
-<a id="a94c5a45284524110009790293593c724" name="a94c5a45284524110009790293593c724"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94c5a45284524110009790293593c724">&#9670;&nbsp;</a></span>split_data()</h2>
+<a id="ac5957e3f38836020cf2f526f23298e77" name="ac5957e3f38836020cf2f526f23298e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5957e3f38836020cf2f526f23298e77">&#9670;&nbsp;</a></span>split_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1734,12 +1745,6 @@ template&lt;typename DataSetType &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt;::split_data </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>test_ratio</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt; &amp;&#160;</td>
           <td class="paramname"><em>train_data</em>, </td>
         </tr>
@@ -1747,7 +1752,13 @@ template&lt;typename DataSetType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a>&lt; DataSetType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>test_data</em>&#160;</td>
+          <td class="paramname"><em>test_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>test_ratio</em> = <code>0.3</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1847,7 +1858,7 @@ template&lt;typename DataSetType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d4/dd8/class_data_set.html">DataSet</a></li>
-    <li class="footer">Generated on Sat Dec 4 2021 00:33:21 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+    <li class="footer">Generated on Sun Dec 5 2021 00:52:50 for ZSL by <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>
 </body>
