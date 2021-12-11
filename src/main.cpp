@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/dataset/DataSet.hpp"
+#include <dataset/DataSet.hpp>
 
 // file is used for ad-hoc testing/experimenting
 // will be removed in releases
