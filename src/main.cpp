@@ -6,8 +6,8 @@
 
 int main()
 {
-    DataSet<std::string> data("../datasets/doubles.csv");
-    data.head(10);
+    DataSet<std::string> data("../datasets/rows_with_nulls.csv");
+    std::cout << data.count_na() << "\n";
 
     return 0;
 }
